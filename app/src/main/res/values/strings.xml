@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Majority Assignment</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="countries_fragment_label">Countries List</string>
+    <string name="country_fragment_label">Country Detail</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="search">Search The Name Of Country</string>
+    <string name="country_flag">Country Flag</string>
+
+    <string name="capital_name">Capital: %1$s</string>
+    <string name="region_name">Region: %1$s</string>
+    <string name="arg_country_data">ARG_COUNTRY_DETAIL</string>
+    <string name="no_data_found">No data found...!!!</string>
+    <string name="please_check_your_internet">Please check your internet connection</string>
+</resources>

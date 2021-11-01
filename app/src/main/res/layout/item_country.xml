@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="countryInfo"
+            type="com.majority.assignment.data.entities.countryInfo.CountryInfo" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp">
+
+            <FrameLayout
+                android:id="@+id/flagContainer"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/officialName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+
+                >
+
+                <ProgressBar
+                    android:id="@+id/flagProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    />
+
+                <ImageView
+                    android:id="@+id/flag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/country_flag"
+                    android:src="@mipmap/ic_launcher"
+                    android:transitionName="flag_transition"
+                    app:loadCircleImage="@{countryInfo.flags.png}" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/officialName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:text="@{countryInfo.name.official}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                android:transitionName="official_name_transition"
+                app:layout_constraintBottom_toTopOf="@id/capital"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/flagContainer"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Official Name" />
+
+            <TextView
+                android:id="@+id/capital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:text="@{`Capital: ` +countryInfo.capital[0]}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@id/region"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/flagContainer"
+                app:layout_constraintTop_toBottomOf="@+id/officialName"
+                tools:text="Capital" />
+
+            <TextView
+                android:id="@+id/region"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:text="@{`Region: ` +countryInfo.region}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/flagContainer"
+                app:layout_constraintTop_toBottomOf="@+id/capital"
+                tools:text="region" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
