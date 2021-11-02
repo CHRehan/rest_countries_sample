@@ -9,6 +9,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
+/**
+ *OKHttp3 & Retrofit 2.0 client to make an APIs call.
+ *It's a generic class and provide the client of the desired API service.
+ */
 
 class CountryClient @Inject constructor() {
 

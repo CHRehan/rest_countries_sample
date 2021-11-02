@@ -13,6 +13,15 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 
+/**
+ *DataStore is a new and improved data storage solution aimed at replacing
+ *SharedPreferences. Built on Kotlin coroutines and Flow, DataStore provides
+ *two different implementations:
+ *Proto DataStore, that stores typed objects (backed by protocol buffers)
+ *and Preferences DataStore, that stores key-value pairs.
+ *I am using DataStore Preference to store the data in the form of Key Value pair.
+ */
+
 @ActivityRetainedScoped
 class DataStoreManager @Inject constructor(
     @ApplicationContext private val context: Context
