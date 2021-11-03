@@ -6,7 +6,7 @@ import retrofit2.HttpException
 import java.net.UnknownHostException
 
 /**
- * Wrapper Class  to wrap the API responses.
+ * Wrapper  to wrap the API responses.
  * If there is all good this class will send the data as it to ViewModel.
  * If there is any error this class is parse the error and send the appropriate message.
  *
