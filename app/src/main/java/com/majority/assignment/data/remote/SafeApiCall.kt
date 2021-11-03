@@ -7,8 +7,8 @@ import java.net.UnknownHostException
 
 /**
  * Wrapper  to wrap the API responses.
- * If there is all good this class will send the data as it to ViewModel.
- * If there is any error this class is parse the error and send the appropriate message.
+ * If there is all good this  will send the data as it to ViewModel.
+ * If there is any error this  is parse the error and send the appropriate message.
  *
  * Note: This is my own personal approach it's provide us a lot of ease and save our development time
  * when we have around 100 network calls in a project.
