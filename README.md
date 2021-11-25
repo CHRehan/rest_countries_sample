@@ -1,4 +1,4 @@
-## MAJORITY assignment solution in Kotlin via MVVM Repository Pattern.
+## MVVM Repository Pattern In Kotlin With Coroutine.
 
 <img align="right"  src="demo.gif" width="250"/>
 
@@ -25,7 +25,7 @@ Libraries Used
   * [Lifecycles][5] - Create a UI that automatically responds to lifecycle events.
   * [LiveData][6] - Build data objects that notify views when the underlying database changes.
   * [Navigation][7] - Handle everything needed for in-app navigation.
-  * [Room][8] - Access your app's SQLite database with in-app objects and compile-time checks.
+  * [DataStore Preferences][8] - Jetpack DataStore is a data storage solution that allows you to store key-value pairs or typed objects with protocol buffers.
   * [ViewModel][9] - Store UI-related data that isn't destroyed on app rotations. Easily schedule
     asynchronous tasks for optimal execution.
 * [UI][11] - Details on why and how to use UI Components in your apps - together or separate
@@ -47,7 +47,7 @@ Libraries Used
 [5]: https://developer.android.com/topic/libraries/architecture/lifecycle
 [6]: https://developer.android.com/topic/libraries/architecture/livedata
 [7]: https://developer.android.com/topic/libraries/architecture/navigation/
-[8]: https://developer.android.com/topic/libraries/architecture/room
+[8]: https://developer.android.com/topic/libraries/architecture/datastore
 [9]: https://developer.android.com/topic/libraries/architecture/viewmodel
 [11]: https://developer.android.com/guide/topics/ui
 [12]: https://developer.android.com/training/animation/

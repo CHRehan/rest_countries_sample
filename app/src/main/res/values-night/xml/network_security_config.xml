@@ -3,6 +3,6 @@
 
     <domain-config cleartextTrafficPermitted="true">
 
-        <domain includeSubdomains="true">com.majority.assignment</domain>
+        <domain includeSubdomains="true">com.sample</domain>
     </domain-config>
 </network-security-config>

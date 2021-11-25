@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Majority Assignment</string>
+    <string name="app_name">MVVM Sample</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="countries_fragment_label">Countries List</string>

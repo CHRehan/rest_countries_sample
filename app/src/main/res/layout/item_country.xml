@@ -8,7 +8,7 @@
 
         <variable
             name="countryInfo"
-            type="com.majority.assignment.data.entities.countryInfo.CountryInfo" />
+            type="com.sample.data.entities.countryInfo.CountryInfo" />
     </data>
 
     <androidx.cardview.widget.CardView

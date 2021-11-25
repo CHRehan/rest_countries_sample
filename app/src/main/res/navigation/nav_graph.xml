@@ -6,7 +6,7 @@
     app:startDestination="@id/CountriesFragment">
     <fragment
         android:id="@+id/CountriesFragment"
-        android:name="com.majority.assignment.ui.CountriesFragment"
+        android:name="com.sample.ui.CountriesFragment"
         android:label="@string/countries_fragment_label"
         tools:layout="@layout/countries_fragment">
 
@@ -18,12 +18,12 @@
     </fragment>
     <fragment
         android:id="@+id/CountryDetailFragment"
-        android:name="com.majority.assignment.ui.CountryFragment"
+        android:name="com.sample.ui.CountryFragment"
         android:label="@string/country_fragment_label"
         tools:layout="@layout/country_detail_fragment">
         <argument
             android:name="countryInfo"
-            app:argType="com.majority.assignment.data.entities.countryInfo.CountryInfo" />
+            app:argType="com.sample.data.entities.countryInfo.CountryInfo" />
     </fragment>
 
 </navigation>
