@@ -13,12 +13,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.sample.R
+import com.sample.adapters.CountriesAdapter
 import com.sample.data.remote.Resource
 import com.sample.databinding.CountriesFragmentBinding
 import com.sample.extensions.handleApiError
 import com.sample.extensions.obtainViewModel
 import com.sample.extensions.visible
-import com.sample.ui.countries.CountriesAdapter
 import com.sample.utilities.MarginItemDecoration
 import com.sample.utilities.autoCleared
 import com.sample.viewmodels.CountriesViewModel

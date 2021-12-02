@@ -1,4 +1,4 @@
-package com.sample.ui.countries
+package com.sample.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -15,8 +15,7 @@ class CountriesAdapter(
         binding: ItemCountryBinding,
         countryInfo: CountryInfo
     ) -> Unit
-) :
-    RecyclerView.Adapter<CountryViewHolder>(), Filterable {
+) : RecyclerView.Adapter<CountryViewHolder>(), Filterable {
 
 
     private val searchableList = ArrayList<CountryInfo>()
@@ -36,23 +35,21 @@ class CountriesAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
         val binding: ItemCountryBinding =
             ItemCountryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return CountryViewHolder(binding)
+
+        val countryViewHolder = CountryViewHolder(binding)
+        countryViewHolder.itemView.setOnClickListener {
+            openCountryInfo.invoke(
+                binding,
+                searchableList[countryViewHolder.adapterPosition]
+            )
+        }
+        return countryViewHolder
     }
 
     override fun getItemCount(): Int = searchableList.size
 
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
         holder.bind(searchableList[position])
-
-        holder.itemView.setOnClickListener {
-
-            openCountryInfo.invoke(
-                holder.view,
-                searchableList[position]
-            )
-
-
-        }
     }
 
     override fun getFilter(): Filter {
